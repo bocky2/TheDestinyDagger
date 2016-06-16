@@ -83,7 +83,7 @@ function drawMap()
 {
 	for(var layerIdx=0; layerIdx<LAYER_COUNT; layerIdx++)
 	{
-		if(layerIdx==LAYER_ENEMY) continue
+		if(layerIdx==LAYER_ENEMIES) continue
 		var idx = 0;
 		for( var y = 0; y < level1.layers[layerIdx].height; y++ )
 		{

@@ -46,6 +46,20 @@ var fps = 0;
 var fpsCount = 0;
 var fpsTime = 0;
 
+var LAYER_COUNT = 4;
+var LAYER_BACKGOUND = 0;
+var LAYER_PLATFORMS = 1;
+var LAYER_BACKGROUND_OBJECTS = 2;
+var LAYER_ENEMIES = 3;
+
+var MAP = {tw:20, th:29};
+var TILE = 32;
+var TILESET_TILE = TILE;
+var TILESET_PADDING = 0;
+var TILESET_SPACING = 0;
+var TILESET_COUNT_X = 30;
+var TILESET_COUNT_Y = 20;
+
 var player = new Player();
 var keyboard = new Keyboard();
 var dagger = new Dagger();
@@ -63,6 +77,8 @@ function runSplash(deltaTime)
 
 function runLevel1(deltaTime)
 {
+	drawMap();
+	
 	player.update(deltaTime);
 	player.draw();
 	
